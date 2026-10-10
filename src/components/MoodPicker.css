@@ -1,0 +1,88 @@
+/* Mood Picker Styling */
+.mood-picker-container {
+  margin-bottom: 20px;
+}
+
+.picker-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.emoji-button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.emoji-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 6px;
+  background-color: #f8fafc;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  user-select: none;
+}
+
+.emoji-btn:hover {
+  background-color: var(--primary-light);
+  border-color: #c7d2fe;
+  transform: translateY(-2px);
+}
+
+.emoji-icon {
+  font-size: 2rem;
+  line-height: 1;
+  transition: transform var(--transition-fast);
+}
+
+.emoji-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Active / Selected state highlight */
+.emoji-btn.selected {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  transform: translateY(-2px);
+}
+
+.emoji-btn.selected .emoji-icon {
+  transform: scale(1.15);
+}
+
+.emoji-btn.selected .emoji-text {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Responsive adjustment for small phone screens */
+@media (max-width: 480px) {
+  .emoji-button-group {
+    gap: 6px;
+  }
+
+  .emoji-btn {
+    padding: 10px 4px;
+  }
+
+  .emoji-icon {
+    font-size: 1.65rem;
+  }
+
+  .emoji-text {
+    font-size: 0.7rem;
+  }
+}
